@@ -4,8 +4,13 @@ project(mysql_cpp C CXX)
 set(CMAKE_C_STANDARD 11)
 
 link_libraries(mysqlclient)
-include_directories("/usr/local/opt/mysql-client/include/mysql")
-link_directories("/usr/local/opt/mysql-client/lib")
 
+# linux
+link_directories(/usr/lib64/mysql)
 
-add_executable(mysql_cpp mysql_cpp.cpp)
+# mac os
+#include_directories("/usr/local/opt/mysql-client/include/mysql")
+#link_directories("/usr/local/opt/mysql-client/lib")
+
+add_executable(mysql_cpp mysql/mysql_cpp.cpp)
+add_executable(main main.cpp)

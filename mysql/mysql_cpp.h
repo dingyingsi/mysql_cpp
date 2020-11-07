@@ -2,7 +2,7 @@
 #define _MYSQL_H_
 #include <iostream>
 #include <string>
-#include <mysql.h>
+#include <mysql/mysql.h>
 
 using namespace std;
 
